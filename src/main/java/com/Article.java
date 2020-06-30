@@ -53,9 +53,9 @@ public class Article {
      */
     public Article(File file) {
         //1初始化md文件相关信息
-
+        initFileInfo(file);
         //2初始化md文件内容相关信息
-
+        initContentInfo(file);
     }
     private void initFileInfo(File file){
         System.out.println("Article:初始化md文件相关信息...");

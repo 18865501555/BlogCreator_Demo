@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <title>传奇的博客首页</title>
@@ -22,7 +22,7 @@
     </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto" th:remove="all-but-first">
+      <div class="navbar-nav mr-auto">
         <!--
         我们使用Thymeleaf将一个模版页面(静态页面)，就好比当前页面与一组数据结合，
         生成一个含有该数据的页面，而结合时我们会将数据存入Context对象中。
@@ -53,9 +53,9 @@
         subject.get("subjectName")根据key获取value
         -->
         <a class="nav-item nav-link" href="#">主页</a>
-        <a class="nav-item nav-link" href="category/index.html">IT</a>
-        <a class="nav-item nav-link" href="category/index.html">Java</a>
-        <a class="nav-item nav-link" href="category/index.html">JavaScript</a>
+        
+        
+        
       </div>
     </div>
   </nav>
@@ -68,57 +68,12 @@
 
 <div class="container-fluid bg-light">
   <div class="row">
-    <div class="col-8"
-         th:remove="all-but-first">
-      <div class="container bg-white py-2 my-5 mb-3"
-           th:each="article:${datasource.indexPageTopArticles}">
-		<!-- 标题区域 -->
-        <h2 class="font-weight-normal text-center mb-1"
-            th:text="${article.metaData.title}">
-            RUST语言的编程范式
-        </h2>
-		<!-- 元数据 -->
-        <div class="col-12 text-center border-bottom mt-2"
-             th:text="${article.metaData.date}+' '+${article.metaData.author}">
-			2020年06月12日 陈小明
-        </div>
-		<!-- 正文 -->
-        <div>
-          <p>总是有很多很多人来问我对Rust语言怎么看的问题，在各种地方被at，
-			 其实，我不是很想表达我的想法。因为在不同的角度，你会看到不同的东西。
-		  </p>
-        </div>
-      </div>
+    <div class="col-8">
+      
 
-      <div class="container bg-white py-2 my-5 mb-3">
-		<!-- 标题区域 -->
-        <h2 class="font-weight-normal text-center mb-1">与程序员相关的CPU缓存知识</h2>
-		<!-- 元数据 -->
-        <div class="col-12 text-center border-bottom mt-2">
-			2020年06月12日 陈小明
-        </div>
-		<!-- 正文 -->
-        <div>
-          <p>总是有很多很多人来问我对Rust语言怎么看的问题，在各种地方被at，
-			 其实，我不是很想表达我的想法。因为在不同的角度，你会看到不同的东西。
-		  </p>
-        </div>
-      </div>
+      
 	  
-      <div class="container bg-white py-2 my-5 mb-3">
-		<!-- 标题区域 -->
-        <h2 class="font-weight-normal text-center mb-1">别让自己“墙”了自己</h2>
-		<!-- 元数据 -->
-        <div class="col-12 text-center border-bottom mt-2">
-			2020年06月12日 陈小明
-        </div>
-		<!-- 正文 -->
-        <div>
-          <p>总是有很多很多人来问我对Rust语言怎么看的问题，在各种地方被at，
-			 其实，我不是很想表达我的想法。因为在不同的角度，你会看到不同的东西。
-		  </p>
-        </div>
-      </div>
+      
 
     </div>
     <div class="col-4">
